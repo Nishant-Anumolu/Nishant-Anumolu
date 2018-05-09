@@ -1,0 +1,218 @@
+CONDITION TERENARY:
+Terenary operators are all about doing short and quick conditional checks on what kind of opearation can be executed 
+
+Using switch sstaement:
+
+<div id=”output”>TERENARY OPERATOR</div>
+
+checkname = document.getElementById("output").innerHTML;
+var myName=prompt("Does your name match with input, if yes what name");
+var namecheck= false;
+var inputname="";
+var checkname1 = (myName == checkname ) ?inputname="the name u typed matches perfectly":inputname="the name u typed does not matches perfectly";
+alert(checkname1);
+
+
+// Code to check if name matches with array:
+
+var arr= ["nishant","xxxx","ashish","meghana"];
+var myName=prompt("Does your name match with input, if yes what name");
+var checkname = arr.indexOf(myName);
+var message = checkname >-1 ? "true":"false";
+console.log(message);
+
+1.	  var userNames = ["mike","john","larry"];
+2.	        var checkUser = userNames.indexOf("mike") > -1 ? true : false;
+3.	        var output = document.getElementById("output");
+4.	        
+5.	        
+6.	        var login = false;
+7.	        var outputHolder = "";
+8.	        var userOkay = login ? outputHolder = "true" : outputHolder = "false";
+9.	        output.innerHTML = userOkay;
+10.	        
+11.	       // login ? alert("okay") : alert("denied");
+12.	 
+13.	 
+14.	        var userNames = ["mike","john","larry"];
+15.	        var userInput = prompt("what is your name?");
+16.	        var output = document.getElementById("output");
+17.	        output.innerHTML = userNames.indexOf(userInput) > -1 ?  "welcome " : "denied";
+18.	        output.innerHTML += ", "+ userInput;
+
+
+
+More using the IF Statement:
+
+19.	        var userNames = ["mike","john","larry"];
+20.	       // var userInput = prompt("what is your name?"); //---question is commented out
+21.	        var output = document.getElementById("output");
+22.	        output.innerHTML = userNames.indexOf(userInput) > -1 ?  "welcome " : "denied";
+        output.innerHTML += ", "+ userInput;
+
+terenary difft from if else like this:
+
+var login = false; //setting initial value setting
+if(userNames.indexOf(userInput) > -1)
+{
+ Output.innerHTML =”welcome it was true,”+ userInput;
+}
+else
+{
+Output.innerHTML =”welcome it was false,”+ userInput;
+
+}
+
+Take contnious input and update array statement in Ifelse:
+
+23.	        var userNames = ["mike","john","larry"];
+24.	        var userInput = prompt("what is your name?"); //---question is commented out
+25.	        var output = document.getElementById("output");
+26.	         Var htmlOutput=””
+27.	 If(userNames.indexOf(userInput) > -1 )
+28.	{
+29.	 htmlOutput = “Welcome it was true”;
+30.	 Var age = prompt(“age”);
+31.	 htmlOutput+ = age>18?”u are over 18”:”you are under 18”
+32.	
+33.	}
+34.	else
+35.	{
+36.	 htmlOutput  = “output denied”
+37.	}
+Output.innerHTML= htmlOutput   + ‘,’ + userInput
+Else If Statements:
+1.	   var myTime = prompt("what hour is it?");
+2.	        
+3.	        var output = document.getElementById("output");
+4.	        
+5.	        if(myTime >= 8 && myTime < 12) {
+6.	            output.innerHTML = "Wake up its morning";
+7.	        } else if (myTime >= 12 && myTime < 13) {
+8.	            output.innerHTML = "go to Lunch";
+9.	        } else if (myTime >= 13 && myTime <= 16) {
+10.	            output.innerHTML = "Go to work";
+11.	        } else if (myTime >16 && myTime < 20) {
+12.	            output.innerHTML = "Dinner Time";
+13.	        } else if (myTime >= 22) {
+14.	            output.innerHTML = "Time to go to sleep";
+15.	        } else {
+16.	           output.innerHTML = "You should be sleeping";
+17.	        }
+Switch Statements:
+1.	  var myTime = prompt("What are you doing?");
+2.	        var output = document.getElementById("output");
+3.	        var html;
+4.	        
+5.	        switch (myTime) {   /// Note here we can give number(myTime) to feed input values in numbers……..and run them or just give number in quotes like”8”,”9” ..like that to feed them.
+
+6.	            case "Get Up":
+7.	                html = "8:00AM";
+8.	                break;
+9.	            case "Lunch":
+10.	                html ="12:00PM";
+11.	                break;
+12.	            case "Dinner":
+13.	                html ="6:00PM";
+14.	                break;
+15.	            default:
+16.	                html = "Not found";
+17.	        }
+18.	        
+19.	        output.innerHTML = html;
+20.	
+21.	
+If  Statements Coin Toss:
+1.	<div id=”output”></div>
+2.	<script>
+3.	var html = "something went wrong";
+4.	        var output = document.getElementById("output");
+5.	        var question = prompt("heads or tails");
+6.	        var result = question == "heads" ? 1 : 0;
+7.	        var randomNumber = Math.floor(Math.random()*2);
+8.	        if(result == randomNumber) {
+9.	            html = "yes guessed correctly";
+10.	        }else{
+11.	            html = "you were wrong";        
+12.	        }
+13.	        output.innerHTML = html;
+14.	</script>
+Magic 8 ball game:
+1.	  var answer = "something went wrong";
+2.	        var output = document.getElementById("output");
+3.	 
+4.	        var question = prompt("Ask me anything");
+5.	        var randomNumber = Math.floor(Math.random()*6);
+6.	        switch (randomNumber){
+7.	            case 0:
+8.	                answer = "it will work out";
+9.	                break;
+10.	            case 1:
+11.	                answer = "Maybe maybe not";
+12.	                break;
+13.	            case 2:
+14.	                answer = "Probably not";
+15.	                break;
+16.	            case 3:
+17.	                answer = "Highly likely";
+18.	                break;
+19.	            default:
+20.	                answer = "I don't know about that";
+21.	        }
+22.	        output.innerHTML = "You asked me "+question+"<br>I think that "+answer;
+
+Rock Paper Scissor game:
+uTo convert character at 1st position to upper/lowercase:
+computer.charAt(0).toUpperCase() // convert first character of string to capitals.
+computer.charAt(1).toLowerCase() // convert first character of string to lowers.
+   <div id="output">Complete JavaScript Course </div>
+    <script>
+        var output = document.getElementById('output');
+        var player = prompt("Do you choose Rock Paper or Scissors?");
+        var ps = player.charAt(0).toUpperCase();
+        var win = false;
+        var computer = Math.random();
+        if (computer < 0.34) {
+            computer = "Rock";
+        }
+        else if (computer < 0.67) {
+            computer = "Paper";
+        }
+        else {
+            computer = "Scissors";
+        }
+        var cs = computer.charAt(0).toUpperCase();
+        console.log(computer);
+        var html = "";
+        if (cs == ps) {
+            html += "Its a Tie";
+        }
+        else {
+            if (ps == "R") {
+                player = "Rock";
+                if (cs == "S") {
+                    win = true;
+                }
+            }
+            else if (ps == "P") {
+                player = "Paper";
+                if (cs == "R") {
+                    win = true;
+                }
+            }
+            else {
+                player = "Scissors";
+                if (cs == "P") {
+                    win = true;
+                }
+            }
+            if (win) {
+                html += " You Win";
+            }
+            else {
+                html += " You Lost";
+            }
+        }
+        output.innerHTML = "You      vs    Computer<br>" + player + " vs " + computer + "<br>" + html;
+    </script>
+
